@@ -1,0 +1,11 @@
+.menu {
+    background-color: #f1960d;
+    color: #000000;
+}
+
+.menu a {
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+

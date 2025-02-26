@@ -1,0 +1,19 @@
+
+/* Produtos */
+
+.product-card {
+    background-color: #fff !important;
+    margin: 0 4px;
+}
+
+.product-card--name {
+    font-size: .875rem;
+}
+.product-card--name > a {
+    color: #272c36;
+    text-decoration: none;
+}
+
+.product-card--name > a:hover {
+    color: #e9a628;
+}

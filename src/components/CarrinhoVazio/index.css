@@ -1,0 +1,18 @@
+.cart-products--empty-cart {
+    text-align: center;
+}
+.cart-products--empty-cart-title {
+    color: #727f8d;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.313rem;
+}
+
+.cart-products--empty-cart-description {
+    color: #727f8d;
+}
+
+.cart-products--empty-cart-icon {
+    font-size: 4rem;
+    color: #727f8d;
+}

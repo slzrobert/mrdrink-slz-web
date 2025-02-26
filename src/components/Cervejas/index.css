@@ -1,0 +1,36 @@
+.slick-next {
+    right: -40px;
+}
+
+.slick-prev {
+    left: -40px;
+}
+
+.slick-next, .slick-prev {
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 40px;
+    line-height: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+}
+
+.slick-next:before, .slick-prev:before {
+    color: #e69c10;
+    font-size: 40px;
+    line-height: 1;
+    opacity: .75;
+}
+
+.slick-dots li button:before {
+    color: #e69c10;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #e69c10;
+}

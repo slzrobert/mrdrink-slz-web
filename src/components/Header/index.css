@@ -1,0 +1,71 @@
+@keyframes animeLogo {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }   
+}
+
+.animalogo {
+    animation-duration: 3s;
+    animation-name: animeLogo;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.navbar-brand {
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -125px;
+    z-index: 1;
+}
+
+.link-header {
+    color: #fe9c0a;
+    font-size: 1.5rem;
+}
+
+.page-header {
+    position: relative;
+    padding-top: 13.125rem;
+
+}
+
+.logo {
+    left: 50%;
+    margin-left: -100px;
+    top: 0.313rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.form-control-search {
+    border-radius: 0 !important;
+}
+
+.form-control-search:focus {
+    border-color: #ffc107;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(255,157,10,.25);
+}
+
+.btn-mrdrink {
+    color: #000000;
+    background-color: #fe9c0a;
+    border-color: #fe9c0a;
+    border-radius: 0 !important;
+}
+
+.btn-mrdrink:hover {
+    color: #000000;
+    background-color: #f1960d;
+    border-color: #f1960d;
+}
+
+.btn-mrdrink:active {
+    color: #000000 !important;
+    background-color: #df8a0c !important;
+    border-color: #df8a0c !important;
+}
