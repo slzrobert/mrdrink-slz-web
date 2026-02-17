@@ -1,0 +1,64 @@
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$orange: #e69c10;
+$primary: $orange;
+
+$body-bg: #272c36;
+$body-color: $white;
+
+$body-emphasis-color: $orange;
+
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: shift-color($link-color, 5%);
+
+$navbar-light-color: $primary;
+
+$emphasized-link-hover-darken-percentage: 5%;
+
+$btn-link-disabled-color: $gray-500;
+
+$input-bg: $gray-400;
+$input-disabled-bg: $gray-500;
+
+$input-color: $gray-800;
+$input-placeholder-color: $gray-600;
+
+$nav-tabs-link-active-color: $orange;
+
+$offcanvas-bg-color: $gray-200;
+$offcanvas-color: $gray-700;
+
+$jumbotron-bg: $gray-700;
+
+$list-group-bg: $gray-700;
+
+$list-group-hover-bg: $gray-800;
+
+$list-group-action-active-bg: $gray-900;
+
+$list-group-action-color: $white;
+
+$card-bg: $gray-700;
+
+$modal-content-bg: $gray-700;
+
+$carousel-control-color: $orange;
+
+$carousel-indicator-active-bg: $orange;
+
+$carousel-caption-color: $gray-900;
+
+$enable-rounded: false;
+$enable-shadows: false;
+

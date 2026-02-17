@@ -1,85 +1,75 @@
-//import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
-
-import Container from  "react-bootstrap/Container";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { FaSearch } from "react-icons/fa";
 
 import Offcanvas from  "react-bootstrap/Offcanvas";
 import Nav from  "react-bootstrap/Nav";
 import Navbar from  "react-bootstrap/Navbar";
+import DropdownButton from  "react-bootstrap/DropdownButton";
 import Button from "react-bootstrap/Button";
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 
-import { FaSearch } from "react-icons/fa";
+import FormLogin from "../FormLogin";
 
 import Logo from "../../assets/logo.svg"
 
 import "./index.css";
+
 
 function Header2() {
     return (
         <>
             <header className="page-header">
                 <Navbar className="position-absolute w-100" expand="lg" variant="">
-                    <Container>
+                    <div className="container">
                         <Offcanvas className="flex-grow-1" placement="end" responsive="lg">
                             <Offcanvas.Body>
 
-
                                 <Nav bsPrefix="navbar-nav">
                                     <Nav.Item>
-                                        <Nav.Link href="#offers">Ofertas</Nav.Link>
+                                        <Nav.Link href="/Ofertas">Ofertas</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link href="#coverage">Cobertura</Nav.Link>
+                                        <Nav.Link href="/Cobertura">Cobertura</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link href="#coverage">CAC</Nav.Link>
+                                        <Nav.Link href="/Central">CAC</Nav.Link>
                                     </Nav.Item>
                                 </Nav>
 
                                 <Nav className="ms-auto">
                                     <Nav.Item>
-                                        <Button variant="outline-light" size="sm" href="#login">Login</Button>
+                                        <Button variant="primary" size="sm" href="/Cadastro">Cadastro</Button>
                                     </Nav.Item>
-                                    <Nav.Item>
-                                        <Button variant="success" size="sm" className="ms-2" href="#create-account">Criar Conta</Button>
-                                    </Nav.Item>
+                                    <DropdownButton variant="outline-light" title="Login" size="sm" className="ms-2" id="login-nav-dropdown" align="end">
+                                        <FormLogin />
+                                    </DropdownButton>
                                 </Nav>
 
                             </Offcanvas.Body>
                         </Offcanvas>
-                    </Container>
+                    </div>
                 </Navbar>
 
                 <div className="d-flex d-flex pt-5 pb-5">
-                    <a href="#" className="mx-auto">
+                    <a href="/" className="mx-auto">
                         <img src={Logo} />
                     </a>
                 </div>
 
                 <div id="search-form" className="pb-5">
-                    <Container>
-                        <Row className="justify-content-center">
-                            <Col lg="6">
-                                <Form>
-                                    <InputGroup size="lg">
-                                        <Form.Control
-                                            placeholder="Pesquisar em Mr. Drink SLZ..."
-                                            aria-label="Pesquisar em Mr. Drink SLZ..."
-                                            aria-describedby="basic-addon2"
-                                            className=" rounded-0"
-                                        />
-                                        <Button variant="primary" className=" rounded-0"><FaSearch /></Button>
-                                    </InputGroup>
-                                </Form>
-                            </Col>
-                        </Row>
-                    </Container>
+                    <div className="container">
+                        <div className="row justify-content-center">
+                            <div className="col-12 col-lg-6">
+                                <form>
+                                    <div className="input-group input-group-lg">
+                                        <input className="form-control" placeholder="Pesquisar em Mr. Drink SLZ..." />
+                                        <button type="button" className="btn btn-primary"><FaSearch /></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div className="">
+                <div className="mb-2">
                     <svg className="waves" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
                         <defs>
                             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />

@@ -1,0 +1,17 @@
+.card-instrucao-pedido {
+    color: #dddddd;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.card-instrucao-pedido--icone {
+    font-size: 3.75rem;
+}
+
+.card-instrucao-pedido--titulo {
+    font-size: 1.125rem;
+}
+
+.card-instrucao-pedido--texto {
+    font-size: .750rem;
+}
