@@ -12,79 +12,29 @@ function Cigarros() {
 
     const listProducts = [
         {
-            image: "assets/beers/Amstel.png",
-            name: "Cerveja Amstel 600ml",
-            price: 6.99,
+            image: "assets/beers/Cigarro-Lucky-Strike.png",
+            name: "Cigarro Lucky Strike",
+            price: 14.99,
         },
         {
-            image: "assets/beers/AntarcticaOriginal.png",
-            name: "Cerveja Antarctica 600ml",
-            price: 7.79,
+            image: "assets/beers/Cigarro-Clean-By-Click.png",
+            name: "Cigarro Clean By Click",
+            price: 12.99,
         },
         {
-            image: "assets/beers/Bohemia.png",
-            name: "Cerveja Bohemia Puro Malte 600ml",
-            price: 6.49,
+            image: "assets/beers/Cigarro-Kent.png",
+            name: "Cigarro Kent",
+            price: 9.99,
         },
         {
-            image: "assets/beers/Brahma.png",
-            name: "Cerveja Brahma Chopp 600ml",
-            price: 6.49,
+            image: "assets/beers/Cigarro-X-Lint.png",
+            name: "Cigarro X-Lint",
+            price: 7.99,
         },
         {
-            image: "assets/beers/BrahmaDM.png",
-            name: "Cerveja Brahma Duplo Malte 600ml",
-            price: 6.49,
-        },
-        {
-            image: "assets/beers/Budweiser.png",
-            name: "Cerveja Budweiser 600ml",
-            price: 6.49,
-        },
-        {
-            image: "assets/beers/Devassa.png",
-            name: "Cerveja Devassa 600ml",
-            price: 5.99,
-        },
-        {
-            image: "assets/beers/Eisenbahn.png",
-            name: "Cerveja Eisenbahn 600ml",
-            price: 5.99,
-        },
-        {
-            image: "assets/beers/Heineken.png",
-            name: "Cerveja Heineken Original 600ml",
-            price: 11.49,
-        },
-        {
-            image: "assets/beers/Magnifica.png",
-            name: "Cerveja Magnífica 600ml",
-            price: 5.99,
-        },
-        {
-            image: "assets/beers/Petra.png",
-            name: "Cerveja Petra 600ml",
-            price: 5.99,
-        },
-        {
-            image: "assets/beers/Skol.png",
-            name: "Cerveja Skol Pilsen 600ml",
-            price: 6.49,
-        },
-        {
-            image: "assets/beers/SkolPM.png",
-            name: "Cerveja Skol Puro Malte 600ml",
-            price: 6.49,
-        },
-        {
-            image: "assets/beers/Spaten.png",
-            name: "Cerveja Spaten 600ml",
-            price: 6.49,
-        },
-        {
-            image: "assets/beers/Stella.png",
-            name: "Cerveja Stella 600ml",
-            price: 6.49,
+            image: "assets/beers/Cigarro-X-Lint.png",
+            name: "Cigarro Dunhill Tradicional",
+            price: 14.99,
         }
     ];
 
@@ -92,8 +42,8 @@ function Cigarros() {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 6,
-        slidesToScroll: 6,
+        slidesToShow: 5,
+        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 1024,

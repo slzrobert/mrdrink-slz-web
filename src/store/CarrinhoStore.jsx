@@ -1,49 +1,53 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import ProductIsInCart from "../utils/ProductIsInCart";
+
+const initialState = {
+    isOpen: false,
+    products: [],
+}
 
 export const useCartStore = create(
     persist(
-        (set) => ({    
-            isOpen: false,
-            products: [],
+        (set, get) => ({    
+            ...initialState,
+            productIsAlreadyInCart: (product) => {
+                return get().products.some((prod) => prod.name === product.name);
+            },
             addToCart: (product) => set((state) => {
 
-                const productIsAlreadyInCart = state.products.some((prod) => prod.name === product.name);
+                let productIsInCart = ProductIsInCart(product, state.products);
 
-                if(productIsAlreadyInCart){
+                if ( productIsInCart ) {
                     return {
-                        ...state,
                         products: state.products.map((prod) => (
                             prod.name === product.name
                             ? {...prod, quantity: prod.quantity + 1}
                             : prod
                         )),
-                        isOpen: state.isOpen ? true : true
+                        isOpen: true
                     }
                 }
 
                 return {
-                    products: [...state.products, {...product, quantity: 1 }],
-                    isOpen: state.isOpen ? true : true
+                    products: [...state.products, {...product, quantity: 1}],
+                    isOpen: true
                 }
             }),
             removeProductCart: (product) => set((state) => {
 
-                const productIsAlreadyInCart = state.products.some((prod) => prod.name === product.name);
+                let productIsInCart = ProductIsInCart(product, state.products);
 
-                if(!productIsAlreadyInCart){
-                    return {...state};
+                if ( productIsInCart ) {
+                    return { products: state.products.filter(prod => prod.name !== product.name ) }
                 }
 
-                return {
-                    products: state.products.filter(prod => prod.name !== product.name ),
-                    isOpen: state.isOpen ? true : true
-                }
+                return state;
             }),
             increaseQuantityProduct: (product) => set((state) => {
                 return {
-                    ...state,
-                    products: state.products.map((prod) => (
+                    products: state.products
+                    .map((prod) => (
                         prod.name === product.name
                         ? {...prod, quantity: prod.quantity + 1}
                         : prod
@@ -52,14 +56,26 @@ export const useCartStore = create(
             }),
             decreaseQuantityProduct: (product) => set((state) => {
                 return {
-                    ...state,
                     products: state.products
                     .map((prod) => (
                         prod.name === product.name && prod.quantity > 1
                         ? {...prod, quantity: prod.quantity - 1}
                         : prod
                     ))
-                    .filter((prod) => prod.quantity > 0)
+                    .filter((prod) => ( prod.quantity > 0 ))
+                }
+            }),
+            updateQuantityProduct: (product, quantity) => set((state) => {
+
+                let qtd = (/^\d+$/.test(quantity)) ? Number(quantity) : 0;
+
+                return  {
+                    products: state.products
+                    .map((prod) => (
+                        prod.name === product.name && qtd > 0
+                        ? {...prod, quantity: qtd}
+                        : {...prod, quantity: 0}
+                    ))
                 }
             }),
             handleOpenClose: () => set((state) => {
@@ -67,6 +83,7 @@ export const useCartStore = create(
                     isOpen: state.isOpen ? false : true,
                 }
             }),
+            removeAllProductsCart: () => set({...initialState, isOpen: true})
         }),
         {
             name: "cart-storage"

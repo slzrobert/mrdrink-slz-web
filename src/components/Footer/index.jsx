@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
-import Logo from '../../assets/logo-branca.svg';
+import Logo from "../../assets/logo.svg"
+import Logo2 from '../../assets/logo-branca.svg';
 import Flags from '../../assets/flags.png';
 
 import "./index.css"
@@ -10,7 +11,12 @@ export default function Footer() {
         <Container>
             <Row>
                 <Col sm={12} md={12} lg={2}>
-                    <img src={Logo} width={200} />
+
+                    <picture>
+                        <source media="(max-width: 900px)" style={{width: '90%'}} srcSet={Logo2} />
+                        <img src={Logo} width={200} />
+                    </picture>
+
                 </Col>
                 <Col sm={12} md={6} lg={5}>
                     <h3 className="title-footer">Horário de Funcionamento:</h3>
